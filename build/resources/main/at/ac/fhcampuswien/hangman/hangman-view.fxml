@@ -350,7 +350,7 @@
       </Button>
       <ImageView fitHeight="187.0" fitWidth="132.0" layoutX="91.0" layoutY="127.0">
          <image>
-            <Image url="@/images/Galgen.png" />
+            <Image url="@/images/Galgen1.png" />
          </image>
       </ImageView>
    </children>
