@@ -36,7 +36,7 @@
       </Button>
       <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="66.0" layoutY="123.0">
          <image>
-            <Image url="@/images/Hangman.png" />
+            <Image url="@./images/Hangman.png" />
          </image>
       </ImageView>
       <ChoiceBox fx:id="categoryButton" layoutX="67.0" layoutY="391.0" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #363636; -fx-background-radius: 8; -fx-border-color: #ffffff; -fx-border-radius: 8;" />
