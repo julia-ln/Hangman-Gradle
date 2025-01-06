@@ -343,14 +343,14 @@
          <graphic>
             <ImageView fitHeight="26.0" fitWidth="27.0">
                <image>
-                  <Image url="@/images/Arrow.png" />
+                  <Image url="@./images/Arrow.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
       <ImageView fitHeight="187.0" fitWidth="132.0" layoutX="91.0" layoutY="127.0">
          <image>
-            <Image url="@/images/Galgen1.png" />
+            <Image url="@./images/Galgen1.png" />
          </image>
       </ImageView>
    </children>

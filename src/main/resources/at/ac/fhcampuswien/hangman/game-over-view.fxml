@@ -33,7 +33,7 @@
       </Text>
       <ImageView fx:id="galgen7" fitHeight="180.0" fitWidth="150.0" layoutX="93.0" layoutY="125.0">
          <image>
-            <Image url="@/images/Galgen7.png" />
+            <Image url="@./images/Galgen7.png" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="101.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your word was:">
@@ -45,7 +45,7 @@
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="30.0">
                <image>
-                  <Image url="@/images/Arrow.png" />
+                  <Image url="@./images/Arrow.png" />
                </image>
             </ImageView>
          </graphic>

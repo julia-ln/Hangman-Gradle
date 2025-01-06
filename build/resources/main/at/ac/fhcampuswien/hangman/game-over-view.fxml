@@ -45,7 +45,7 @@
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="30.0">
                <image>
-                  <Image url="@/images/Arrow.png" />
+                  <Image url="@./images/Arrow.png" />
                </image>
             </ImageView>
          </graphic>
