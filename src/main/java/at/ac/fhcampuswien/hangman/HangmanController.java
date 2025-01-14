@@ -1,49 +1,108 @@
 package at.ac.fhcampuswien.hangman;
 
-
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class HangmanController implements Initializable {
-        @FXML
-        private ChoiceBox<String> categoryButton;
+public class HangmanController {
+    @FXML
+    private Text categoryText;
 
-        private WordProvider wordProvider;
+    @FXML
+    private Text wordText;
 
-        private GameLogic gameLogic;
+    @FXML
+    private ImageView hangmanImage;
 
-        @Override
-        public void initialize(URL url, ResourceBundle resourceBundle) {
-            wordProvider = new WordProvider();
+    private GameLogic gameLogic;
+    private WordProvider wordProvider = new WordProvider();
+    private int wrongGuesses = 0;
+
+    public void setCategory(String category) {
+        categoryText.setText(category);
+        startGame(category);
+    }
+    public void startGame(String category) {
+        String wordToGuess = wordProvider.getRandomWord(category);
+        gameLogic = new GameLogic(wordToGuess, 6);  // 6 max wrong attempts
+        updateWordText();
+    }
 
 
-            categoryButton.getItems().addAll(wordProvider.getCategories());
-        }
+    @FXML
+    public void onQuitButtonClick() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("start-view.fxml"));
+            AnchorPane root = loader.load();
 
-        public void onPlayButtonClick(){
-            String selectedCategory = categoryButton.getValue();
-            if (selectedCategory != null){
-                try {
-                    Stage currentStage = (Stage) categoryButton.getScene().getWindow();
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("hangman-view.fxml"));
-                    AnchorPane root = loader.load();
-                    Scene scene = new Scene(root);
-
-                    currentStage.setScene(scene);
-                    currentStage.close();
-                    currentStage.show();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+            Stage stage = (Stage) categoryText.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
+    @FXML
+    public void onLetterClick(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        char guessedLetter = clickedButton.getText().charAt(0);
+
+        boolean isCorrect = gameLogic.checkGuess(guessedLetter);
+
+        if (isCorrect) {
+            clickedButton.setStyle("-fx-background-color: green;");
+        } else {
+            clickedButton.setStyle("-fx-background-color: red;");
+        }
+        clickedButton.setDisable(true);
+        updateWordText();
+        checkGameStatus();
+    }
+    private void updateWordText() {
+        wordText.setText(gameLogic.getCurrentWordState());
+    }
+
+    private void checkGameStatus() {
+        if (gameLogic.isWin()) {
+            loadWinScreen();
+        } else if (gameLogic.isGameOver()) {
+            loadGameOverScreen();
+
+        }
+    }
+    private void loadWinScreen(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("win-view.fxml"));
+            AnchorPane root = loader.load();
+
+            Stage stage = (Stage) categoryText.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void loadGameOverScreen() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("game-over-view.fxml"));
+            AnchorPane root = loader.load();
+
+            Stage stage = (Stage) categoryText.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+

@@ -9,8 +9,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.fhcampuswien.hangman.GameWinController">
    <children>
+      <ImageView fitHeight="389.0" fitWidth="335.0">
+         <image>
+            <Image url="@./images/Konfetti.png" />
+         </image>
+      </ImageView>
       <Text fill="WHITE" layoutX="72.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: italic;">
          <font>
             <Font name="Arial Rounded MT Bold" size="40.0" />
@@ -43,17 +48,12 @@
             </Text>
          </children>
       </HBox>
-      <ImageView fx:id="galgen7" fitHeight="180.0" fitWidth="150.0" layoutX="93.0" layoutY="125.0">
-         <image>
-            <Image url="@./images/Galgen7.png" />
-         </image>
-      </ImageView>
       <Text fill="WHITE" layoutX="101.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your word was:">
          <font>
             <Font name="System Italic" size="20.0" />
          </font>
       </Text>
-      <Button fx:id="quitButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="37.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE">
+      <Button fx:id="quitButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="37.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE" onAction="#onQuitButtonClick">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="30.0">
                <image>
@@ -62,5 +62,10 @@
             </ImageView>
          </graphic>
       </Button>
+      <ImageView fitHeight="145.0" fitWidth="52.0" layoutX="142.0" layoutY="167.0">
+         <image>
+            <Image url="@./images/happyHangman.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
