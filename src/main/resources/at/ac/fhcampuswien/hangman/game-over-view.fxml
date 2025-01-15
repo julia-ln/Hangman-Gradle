@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.fhcampuswien.hangman.GameoverController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.fhcampuswien.hangman.GameOverController">
    <children>
       <Text fill="WHITE" layoutX="72.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: italic;">
          <font>
@@ -31,7 +31,7 @@
             <Font name="Arial Rounded MT Bold" size="35.0" />
          </font>
       </Text>
-      <ImageView fx:id="galgen7" fitHeight="180.0" fitWidth="150.0" layoutX="93.0" layoutY="125.0">
+      <ImageView fx:id="galgen7" fitHeight="180.0" fitWidth="150.0" layoutX="92.0" layoutY="126.0">
          <image>
             <Image url="@./images/Galgen7.png" />
          </image>
@@ -41,15 +41,6 @@
             <Font name="System Italic" size="20.0" />
          </font>
       </Text>
-      <Button fx:id="quitButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="37.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE" onAction="#onQuitButtonClick">
-         <graphic>
-            <ImageView fitHeight="29.0" fitWidth="30.0">
-               <image>
-                  <Image url="@./images/Arrow.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
       <HBox alignment="CENTER" layoutX="34.0" layoutY="422.0" prefHeight="145.0" prefWidth="267.0" style="-fx-background-color: #cacaca; -fx-background-radius: 8;">
          <children>
             <Text fx:id="gameOverMessage" strokeType="OUTSIDE" strokeWidth="0.0" text="Game over, buddy! Words aren't your strong suit, are they? :)" textAlignment="CENTER" wrappingWidth="234.2318878173828" HBox.hgrow="NEVER">
@@ -62,5 +53,14 @@
             </Text>
          </children>
       </HBox>
+      <Button fx:id="quitButton" layoutX="19.0" layoutY="19.0" mnemonicParsing="false" onAction="#onQuitButtonClick" prefHeight="46.0" prefWidth="45.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="27.0">
+               <image>
+                  <Image url="@images/Arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

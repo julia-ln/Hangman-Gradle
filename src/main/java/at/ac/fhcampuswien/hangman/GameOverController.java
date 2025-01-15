@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class GameWinController {
+public class GameOverController {
     @FXML
     public void onQuitButtonClick(ActionEvent event) {
         try {
@@ -23,8 +23,5 @@ public class GameWinController {
             e.printStackTrace();
         }
     }
-
-
-
 
 }

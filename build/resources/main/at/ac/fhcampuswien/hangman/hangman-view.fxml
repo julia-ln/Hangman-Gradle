@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.fhcampuswien.hangman.HangmanController">
    <children>
@@ -46,7 +46,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="buttonA" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="A" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" onAction="#onLetterClick">
+            <Button fx:id="buttonA" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="A" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -57,7 +57,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonB" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="B" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" onAction="#onLetterClick">
+            <Button fx:id="buttonB" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="B" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -68,7 +68,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonC" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="C" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2" onAction="#onLetterClick">
+            <Button fx:id="buttonC" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="C" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -79,7 +79,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonD" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="D" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="3" onAction="#onLetterClick">
+            <Button fx:id="buttonD" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="D" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="3">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -90,7 +90,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonE" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="E" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="4" onAction="#onLetterClick">
+            <Button fx:id="buttonE" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="E" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="4">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -101,7 +101,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonF" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="F" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="5" onAction="#onLetterClick">
+            <Button fx:id="buttonF" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="F" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="5">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -112,7 +112,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonG" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="G" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="6" onAction="#onLetterClick">
+            <Button fx:id="buttonG" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="G" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="6">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -123,7 +123,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonH" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="H" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="1" onAction="#onLetterClick">
+            <Button fx:id="buttonH" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="H" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="1">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -134,7 +134,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonI" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="I" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#onLetterClick">
+            <Button fx:id="buttonI" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="I" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -145,7 +145,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonJ" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="J" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#onLetterClick">
+            <Button fx:id="buttonJ" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="J" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -156,7 +156,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonK" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="K" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#onLetterClick">
+            <Button fx:id="buttonK" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="K" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -167,7 +167,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonL" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="L" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="1" onAction="#onLetterClick">
+            <Button fx:id="buttonL" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="L" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -178,7 +178,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonM" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="M" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1" onAction="#onLetterClick">
+            <Button fx:id="buttonM" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="M" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -189,7 +189,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonN" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="N" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="1" onAction="#onLetterClick">
+            <Button fx:id="buttonN" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="N" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -200,7 +200,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonO" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="O" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="2" onAction="#onLetterClick">
+            <Button fx:id="buttonO" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="O" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -211,7 +211,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonQ" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="Q" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#onLetterClick">
+            <Button fx:id="buttonQ" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="Q" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -222,7 +222,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonP" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="P" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#onLetterClick">
+            <Button fx:id="buttonP" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="P" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -233,7 +233,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonR" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="R" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#onLetterClick">
+            <Button fx:id="buttonR" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="R" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -244,7 +244,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonS" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="S" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="2" onAction="#onLetterClick">
+            <Button fx:id="buttonS" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="S" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -255,7 +255,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonT" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="T" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="2" onAction="#onLetterClick">
+            <Button fx:id="buttonT" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="T" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -266,7 +266,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonU" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="U" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="2" onAction="#onLetterClick">
+            <Button fx:id="buttonU" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="U" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -277,7 +277,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonV" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="V" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#onLetterClick">
+            <Button fx:id="buttonV" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="V" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -288,7 +288,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonW" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="W" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#onLetterClick">
+            <Button fx:id="buttonW" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="W" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -299,7 +299,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonX" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="X" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3" onAction="#onLetterClick">
+            <Button fx:id="buttonX" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="X" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -310,7 +310,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonY" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="Y" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3" onAction="#onLetterClick">
+            <Button fx:id="buttonY" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="Y" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -321,7 +321,7 @@
                   <Insets bottom="2.0" />
                </padding>
             </Button>
-            <Button fx:id="buttonZ" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="Z" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="3" onAction="#onLetterClick">
+            <Button fx:id="buttonZ" alignment="CENTER" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onLetterClick" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="Z" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -339,7 +339,7 @@
             <Font name="Arial Rounded MT Bold" size="35.0" />
          </font>
       </Text>
-      <Button fx:id="quitButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="37.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE" onAction="#onQuitButtonClick">
+      <Button fx:id="quitButton" layoutX="19.0" layoutY="19.0" mnemonicParsing="false" onAction="#onQuitButtonClick" prefHeight="46.0" prefWidth="45.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="26.0" fitWidth="27.0">
                <image>
@@ -348,10 +348,14 @@
             </ImageView>
          </graphic>
       </Button>
-      <ImageView fitHeight="187.0" fitWidth="132.0" layoutX="91.0" layoutY="127.0">
-         <image>
-            <Image url="@./images/Galgen1.png" />
-         </image>
-      </ImageView>
+      <VBox alignment="CENTER" layoutX="-1.0" layoutY="119.0" prefHeight="200.0" prefWidth="310.0">
+         <children>
+            <ImageView fx:id="hangmanImage" fitHeight="180.0" fitWidth="132.0" preserveRatio="true">
+               <image>
+                  <Image url="@./images/Galgen1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

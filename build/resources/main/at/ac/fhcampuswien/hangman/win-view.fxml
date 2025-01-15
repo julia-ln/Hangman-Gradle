@@ -53,19 +53,19 @@
             <Font name="System Italic" size="20.0" />
          </font>
       </Text>
-      <Button fx:id="quitButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="37.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE" onAction="#onQuitButtonClick">
-         <graphic>
-            <ImageView fitHeight="29.0" fitWidth="30.0">
-               <image>
-                  <Image url="@./images/Arrow.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
       <ImageView fitHeight="145.0" fitWidth="52.0" layoutX="142.0" layoutY="167.0">
          <image>
             <Image url="@./images/happyHangman.png" />
          </image>
       </ImageView>
+      <Button fx:id="quitButton" layoutX="19.0" layoutY="19.0" mnemonicParsing="false" onAction="#onQuitButtonClick" prefHeight="46.0" prefWidth="45.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="27.0">
+               <image>
+                  <Image url="@images/Arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

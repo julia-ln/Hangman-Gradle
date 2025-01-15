@@ -1,9 +1,11 @@
 package at.ac.fhcampuswien.hangman;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
@@ -18,12 +20,7 @@ public class StartController implements Initializable {
     @FXML
     private ChoiceBox<String> categoryButton;
 
-
     private WordProvider wordProvider;
-
-
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -31,23 +28,23 @@ public class StartController implements Initializable {
         categoryButton.getItems().addAll(wordProvider.getCategories());
     }
 
-    public void onPlayButtonClick() {
+    @FXML
+    public void onPlayButtonClick(ActionEvent event){
         String selectedCategory = categoryButton.getValue();
-        if (selectedCategory != null) {
+        if (selectedCategory != null){
             try {
-                Stage currentStage = (Stage) categoryButton.getScene().getWindow();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("hangman-view.fxml"));
                 AnchorPane root = loader.load();
 
                 HangmanController hangmanController = loader.getController();
                 hangmanController.setCategory(selectedCategory);
 
-                Scene scene = new Scene(root);
-                currentStage.setScene(scene);
-                currentStage.close();
-                currentStage.show();
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
+
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }

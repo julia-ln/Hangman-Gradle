@@ -12,6 +12,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 public class HangmanController {
     @FXML
@@ -60,9 +61,11 @@ public class HangmanController {
         boolean isCorrect = gameLogic.checkGuess(guessedLetter);
 
         if (isCorrect) {
-            clickedButton.setStyle("-fx-background-color: green;");
+            clickedButton.setStyle("-fx-background-color: green; -fx-background-border: 8");
         } else {
-            clickedButton.setStyle("-fx-background-color: red;");
+            clickedButton.setStyle("-fx-background-color: red; -fx-background-border: 8");
+            wrongGuesses++;
+            updateHangmanImage();
         }
         clickedButton.setDisable(true);
         updateWordText();
@@ -70,6 +73,15 @@ public class HangmanController {
     }
     private void updateWordText() {
         wordText.setText(gameLogic.getCurrentWordState());
+    }
+
+    @FXML
+    private void updateHangmanImage(){
+        String imageName = "Galgen" + (wrongGuesses + 1) + ".png";
+        InputStream inputStream = getClass().getResourceAsStream("/at/ac/fhcampuswien/hangman/images/" + imageName);
+        
+        Image image = new Image(inputStream);
+        hangmanImage.setImage(image);
     }
 
     private void checkGameStatus() {
