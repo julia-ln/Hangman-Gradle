@@ -67,5 +67,14 @@
             </ImageView>
          </graphic>
       </Button>
+      <Button fx:id="retryButton" layoutX="270.0" layoutY="22.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="28.0">
+               <image>
+                  <Image url="@./images/Retry.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

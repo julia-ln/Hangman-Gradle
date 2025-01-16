@@ -29,7 +29,7 @@ public class HangmanController {
     private int wrongGuesses = 0;
 
     public void setCategory(String category) {
-        categoryText.setText(category);
+        categoryText.setText(category.toUpperCase());
         startGame(category);
     }
     public void startGame(String category) {
@@ -97,6 +97,10 @@ public class HangmanController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("win-view.fxml"));
             AnchorPane root = loader.load();
 
+            GameWinController winController = loader.getController();
+            winController.setCategory(categoryText.getText().toUpperCase());
+            winController.setWord(gameLogic.getWordToGuess().toUpperCase());
+
             Stage stage = (Stage) categoryText.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
@@ -108,6 +112,10 @@ public class HangmanController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("game-over-view.fxml"));
             AnchorPane root = loader.load();
+
+            GameOverController gameOverController = loader.getController();
+            gameOverController.setCategory(categoryText.getText().toUpperCase());
+            gameOverController.setWord(gameLogic.getWordToGuess().toUpperCase());
 
             Stage stage = (Stage) categoryText.getScene().getWindow();
             stage.setScene(new Scene(root));

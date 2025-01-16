@@ -6,11 +6,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class GameOverController {
+    @FXML
+    private Text categoryText;
+
+    @FXML
+    private Text wordText;
+
+    public void setCategory(String category){
+        categoryText.setText(category);
+    }
+
+    public void setWord(String word){
+        wordText.setText(word);
+    }
+
     @FXML
     public void onQuitButtonClick(ActionEvent event) {
         try {

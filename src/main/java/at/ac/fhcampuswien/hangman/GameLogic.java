@@ -13,6 +13,10 @@ public class GameLogic {
         this.attemptsLeft = maxAttempts;
     }
 
+    public String getWordToGuess(){
+        return wordToGuess;
+    }
+
     public boolean checkGuess(char guess) {
         guess = Character.toUpperCase(guess);
         if (guessedLetters.contains(guess)) {
