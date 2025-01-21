@@ -163,7 +163,7 @@ public class HangmanController {
             Button hintButton = getButtonForLetter(hintLetter);
             if (hintButton != null) {
                 hintButton.setDisable(true);
-                hintButton.setStyle("-fx-background-color: black; -fx-border-color: white; -fx-text-decoration: line-through; -fx-text-fill: red;");
+                hintButton.setStyle("-fx-background-color: black; -fx-background-radius: 8; -fx-border-color: white; -fx-border-radius: 8; -fx-text-decoration: line-through; -fx-text-fill: red;");
             }
 
 

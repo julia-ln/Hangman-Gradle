@@ -12,7 +12,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.fhcampuswien.hangman.HangmanController">
    <children>
       <Text fill="WHITE" layoutX="72.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: italic;">
@@ -335,7 +334,7 @@
             </Button>
          </children>
       </GridPane>
-      <Text fx:id="wordText" fill="WHITE" layoutX="34.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*****" textAlignment="CENTER" wrappingWidth="267.2982635498047">
+      <Text fx:id="wordText" fill="WHITE" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*****" textAlignment="CENTER" wrappingWidth="335.0">
          <font>
             <Font name="Arial Rounded MT Bold" size="35.0" />
          </font>
@@ -358,6 +357,6 @@
             </ImageView>
          </children>
       </VBox>
-      <Button layoutX="270.0" layoutY="30.0" mnemonicParsing="false" onAction="#onHintButtonClick" text="Hint" />
+      <Button layoutX="270.0" layoutY="29.0" mnemonicParsing="false" onAction="#onHintButtonClick" text="Hint" />
    </children>
 </AnchorPane>
