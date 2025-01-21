@@ -3,18 +3,25 @@ package at.ac.fhcampuswien.hangman;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HangmanController {
+    @FXML
+    private GridPane letterGrid;
+
     @FXML
     private Text categoryText;
 
@@ -24,9 +31,20 @@ public class HangmanController {
     @FXML
     private ImageView hangmanImage;
 
+    private List<Button> letterButtons = new ArrayList<>();
+
     private GameLogic gameLogic;
     private WordProvider wordProvider = new WordProvider();
     private int wrongGuesses = 0;
+
+    @FXML
+    public void initialize() {
+        for (Node node : letterGrid.getChildren()) {
+            if (node instanceof Button) {
+                letterButtons.add((Button) node);
+            }
+        }
+    }
 
     public void setCategory(String category) {
         categoryText.setText(category.toUpperCase());
@@ -125,12 +143,29 @@ public class HangmanController {
         }
     }
 
+    private Button getButtonForLetter(char letter) {
+        for (Button button : letterButtons) {
+            if (button.getText().equalsIgnoreCase(String.valueOf(letter))) {
+                return button;
+            }
+        }
+        return null;
+
+    }
+
     @FXML
     public void onHintButtonClick(ActionEvent event) {
         if (gameLogic != null && !gameLogic.isHintUsed()) {
             char hintLetter = gameLogic.getHint();
             gameLogic.checkGuess(hintLetter);
             updateWordText();
+
+            Button hintButton = getButtonForLetter(hintLetter);
+            if (hintButton != null) {
+                hintButton.setDisable(true);
+                hintButton.setStyle("-fx-background-color: black; -fx-border-color: white; -fx-text-decoration: line-through; -fx-text-fill: red;");
+            }
+
 
             ((Button) event.getSource()).setDisable(true);
         }
