@@ -26,7 +26,7 @@
             <Font name="System Italic" size="22.0" />
          </font>
       </Text>
-      <Button fx:id="playButton" layoutX="94.0" layoutY="473.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="143.0" style="-fx-background-color: #24033a; -fx-background-radius: 8; -fx-border-color: #ba53ff; -fx-border-radius: 8;" text="PLAY" textFill="#ba53ff" wrapText="true" onAction="#onPlayButtonClick">
+      <Button fx:id="playButton" layoutX="94.0" layoutY="473.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#onPlayButtonClick" prefHeight="58.0" prefWidth="143.0" style="-fx-background-color: #24033a; -fx-background-radius: 8; -fx-border-color: #ba53ff; -fx-border-radius: 8;" text="PLAY" textFill="#ba53ff" wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="33.0" />
          </font>
@@ -39,6 +39,6 @@
             <Image url="@./images/Hangman.png" />
          </image>
       </ImageView>
-      <ChoiceBox fx:id="categoryButton" layoutX="67.0" layoutY="391.0" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #363636; -fx-background-radius: 8; -fx-border-color: #ffffff; -fx-border-radius: 8;" />
+      <ChoiceBox fx:id="categoryButton" layoutX="67.0" layoutY="391.0" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8; -fx-border-color: #ffffff; -fx-border-radius: 8;" />
    </children>
 </AnchorPane>

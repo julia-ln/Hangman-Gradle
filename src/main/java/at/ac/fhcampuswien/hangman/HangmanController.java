@@ -79,7 +79,7 @@ public class HangmanController {
     private void updateHangmanImage(){
         String imageName = "Galgen" + (wrongGuesses + 1) + ".png";
         InputStream inputStream = getClass().getResourceAsStream("/at/ac/fhcampuswien/hangman/images/" + imageName);
-        
+
         Image image = new Image(inputStream);
         hangmanImage.setImage(image);
     }
@@ -124,5 +124,23 @@ public class HangmanController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void onHintButtonClick(ActionEvent event) {
+        if (gameLogic != null && !gameLogic.isHintUsed()) {
+            char hintLetter = gameLogic.getHint();
+            gameLogic.checkGuess(hintLetter);
+            updateWordText();
+
+            ((Button) event.getSource()).setDisable(true);
+        }
+    }
+
 }
+
+
+
+
+
+
 

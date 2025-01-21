@@ -357,5 +357,6 @@
             </ImageView>
          </children>
       </VBox>
+      <Button layoutX="270.0" layoutY="30.0" mnemonicParsing="false" onAction="#onHintButtonClick" text="Hint" />
    </children>
 </AnchorPane>

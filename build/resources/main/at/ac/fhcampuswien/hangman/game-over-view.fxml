@@ -62,7 +62,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="retryButton" layoutX="269.0" layoutY="22.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE">
+      <Button fx:id="retryButton" layoutX="269.0" layoutY="22.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: black; -fx-background-radius: 8;" textFill="WHITE" >
          <graphic>
             <ImageView fitHeight="28.0" fitWidth="28.0">
                <image>
