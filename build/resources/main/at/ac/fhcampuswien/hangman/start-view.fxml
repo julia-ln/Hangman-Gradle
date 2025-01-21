@@ -39,6 +39,6 @@
             <Image url="@./images/Hangman.png" />
          </image>
       </ImageView>
-      <ChoiceBox fx:id="categoryButton" layoutX="67.0" layoutY="391.0" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8; -fx-border-color: #ffffff; -fx-border-radius: 8;" />
+      <ChoiceBox fx:id="categoryButton" layoutX="67.0" layoutY="391.0" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8; -fx-border-color: #ffffff; -fx-border-radius: 8; -fx-font-size: 14px;" />
    </children>
 </AnchorPane>
